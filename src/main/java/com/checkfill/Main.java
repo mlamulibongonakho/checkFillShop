@@ -3,6 +3,8 @@ package com.checkfill;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -14,13 +16,14 @@ public class Main {
     public static void main(String[]args) throws Exception {
 
        try{
+
            LocationDetails locationDetails=new LocationDetails();
-           FileWriter writer = new FileWriter("FileLcation/locations.csv");//Please put a file location
+           FileWriter writer = new FileWriter("filelocation/locations.csv",true);//Please put a file location
 
            List<String> locationValues = new ArrayList<String>();
 
            //Please put a chromdriver location
-            String exePath = "driverlocation/chromedriver.exe";
+            String exePath = "driver/chromedriver.exe";
             System.setProperty("webdriver.chrome.driver", exePath);
 
             WebDriver driver = new ChromeDriver();
@@ -38,27 +41,33 @@ public class Main {
                driver.findElement(By.xpath("//*[@id=\"location-search\"]")).sendKeys(eLocation.locName);
                driver.findElement(By.xpath("/html/body/div[1]/div[1]/header/div/div/div[1]/div[2]/div[2]/form/button")).click();
                driver.switchTo().frame("locatoriframe");
-               //new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"js-yl-12104270\"]/article/div[2]/div[1]/div[2]/a")));
-               locationDetails.setLocationName(driver.findElement(By.xpath("//*[@id=\"js-yl-12104270\"]/article/div[2]/div[2]/address/div[1]/span")).getText());
-               locationDetails.setCity(driver.findElement(By.xpath("//*[@id=\"js-yl-12104270\"]/article/div[2]/div[2]/address/div[2]/span[1]")).getText());
-               locationDetails.setState(driver.findElement(By.xpath("//*[@id=\"js-yl-12104270\"]/article/div[2]/div[2]/address/div[2]/span[1]")).getText());
-               driver.findElement(By.xpath("//*[@id=\"js-yl-12104270\"]/article/div[2]/div[1]/div[2]/a")).click();
+               //Thread.sleep(1000);
+               WebDriverWait wait2 = new WebDriverWait(driver, 10);
+               wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/main/div/div[2]/div[2]/div[1]/div[2]/div/div[2]/ol/li[1]/article/div[2]/div[1]/div[2]/a")));
+               driver.findElement(By.xpath("/html/body/main/div/div[2]/div[2]/div[1]/div[2]/div/div[2]/ol/li[1]/article/div[2]/div[1]/div[2]/a")).click();
+               String Address = driver.findElement(By.xpath("//*[@id=\"LocationFrameId\"]/div[1]/div/div[2]/div[1]/p[1]")).getText();
 
+               String []addresses=Address.split(",");
+
+               locationDetails.setLocationName(addresses[0]);
+               locationDetails.setCity(addresses[1]);
+               locationDetails.setState(addresses[2]);
                locationDetails.setPhoneNumber(driver.findElement(By.id("LocationFrameId")).findElement(By.xpath("//*[@id=\"LocationFrameId\"]/div[1]/div/div[2]/div[2]/div[1]/div[2]/p")).getText());
-               System.out.println("Address : "+locationDetails.getLocationName() + " City : " +locationDetails.getCity() +" State"+ locationDetails.getState() +" State"+ locationDetails.getPhoneNumber());
 
-               locationValues.add("address" + " "+locationDetails.getLocationName());
-               locationValues.add("address" + " "+locationDetails.getCity());
-               locationValues.add("address" + " "+locationDetails.getState());
-               locationValues.add("address" + " "+locationDetails.getPhoneNumber());
+               System.out.println("Address : "+locationDetails.getLocationName() + " City : " +locationDetails.getCity() +" State"+ locationDetails.getState() +" Phone Number"+ locationDetails.getPhoneNumber());
+
+               locationValues.add(locationDetails.getLocationName());
+               locationValues.add(locationDetails.getCity());
+               locationValues.add(locationDetails.getState());
+               locationValues.add(locationDetails.getPhoneNumber());
 
            }
-
            String collect = locationValues.stream().collect(Collectors.joining(","));
            System.out.println(collect);
-
-           writer.write(collect);
+           writer.write(collect+ "\n");
            writer.close();
+
+
         }
        catch (Exception e)
        {

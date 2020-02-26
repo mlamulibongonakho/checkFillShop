@@ -1,3 +1,3 @@
-com\checkfill\main\Main.class
-com\checkfill\main\ELocation.class
-com\checkfill\main\LocationDetails.class
+com\checkfill\LocationDetails.class
+com\checkfill\ELocation.class
+com\checkfill\Main.class

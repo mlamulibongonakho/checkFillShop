@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcc8362c-1f69-41a8-818d-c46a3e637d5e" name="Default Changelist" comment="" />
+    <list default="true" id="dcc8362c-1f69-41a8-818d-c46a3e637d5e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestShopLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/locations.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/checkfill/ELocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/checkfill/ELocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/checkfill/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/checkfill/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkFillShop-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/checkFilShopLocations.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/checkfill/ELocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/checkfill/ELocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/checkfill/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/checkfill/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +30,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -28,7 +47,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1YGr4utnAaRDvBXhRREqNYqKfnI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - FRG/Downloads/chick-fil-a-Location-master/chick-fil-a-Location-master" />
@@ -49,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.TestShopLocation.searchForMultipleLocations">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.checkfill.Main" />
       <module name="checkFilShopLocations" />
@@ -63,33 +84,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.checkfill.main.Main" />
+    <configuration name="TestShopLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="checkFilShopLocations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.checkfill.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestShopLocation" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="checkFillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestShopLocation.demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="checkFilShopLocations" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="checkFillTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="TestShopLocation" />
+      <option name="METHOD_NAME" value="demo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestShopLocation.searchForMultipleLocations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkFilShopLocations" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestShopLocation" />
+      <option name="METHOD_NAME" value="searchForMultipleLocations" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestShopLocation.searchLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkFilShopLocations" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestShopLocation" />
+      <option name="METHOD_NAME" value="searchLocation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestShopLocation.searchForMultipleLocations" />
+        <item itemvalue="JUnit.TestShopLocation.searchLocation" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.checkFillTest" />
+        <item itemvalue="JUnit.TestShopLocation" />
+        <item itemvalue="JUnit.TestShopLocation.demo" />
       </list>
     </recent_temporary>
   </component>
@@ -110,24 +150,45 @@
       <workItem from="1582659499384" duration="11939000" />
       <workItem from="1582694831998" duration="4326000" />
       <workItem from="1582699245631" duration="6372000" />
+      <workItem from="1582706859719" duration="1774000" />
+      <workItem from="1582723269235" duration="2966000" />
+      <workItem from="1582727290584" duration="3277000" />
+      <workItem from="1582730587751" duration="62000" />
+      <workItem from="1582731060398" duration="2181000" />
+      <workItem from="1582733572996" duration="2372000" />
+      <workItem from="1582736273104" duration="2764000" />
+      <workItem from="1582739055771" duration="2124000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/checkfill/main/Main.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/checkfill/Main.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/checkfill/main/Main.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/checkfill/Main.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
